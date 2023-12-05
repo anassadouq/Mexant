@@ -1,0 +1,93 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+.section-heading {
+    position: relative;
+    z-index: 2;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.section-heading h6 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ff511a;
+    font-weight: 700;
+} 
+.section-heading h4 {
+    margin-top: 10px;
+    line-height: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #212741;
+} 
+.section-heading p {
+    margin-top: 30px;
+}
+section.calculator {
+    background-image: url('./calculator-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    padding: 80px 0px;
+} 
+section.calculator .left-image {
+    margin: -110px 45px -80px 0px;
+} 
+section.calculator .section-heading {
+    text-align: left;
+} 
+section.calculator .section-heading h4 {
+    color: #fff;
+} 
+#calculate label {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+} 
+#calculate input, #calculate select {
+    background-color: rgba(121,134,151, 0.7);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 42px;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 30px;
+    outline: none;
+} 
+#calculate select {
+    cursor: pointer;
+} 
+#calculate button.orange-button {
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff511a;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    border: none;
+    transition: all .3s;
+} 
+#calculate button.orange-button:hover {
+    opacity: 0.9;
+}
+.orange-button a {
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff511a;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+}
