@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Freedom extends Model
 {
     use HasFactory;
-    protected $fillable = ['name',	'email',	'phone',   'adresse'];
+    protected $fillable = [
+        'name',
+        'email', 
+        'phone', 
+        'adresse'
+    ];
 }

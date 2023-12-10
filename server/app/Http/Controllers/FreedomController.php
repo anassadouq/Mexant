@@ -10,19 +10,14 @@ use Illuminate\Http\Request;
 
 class FreedomController extends Controller {
 
-    public function index(){
-       return Freedom::select('id','name','email','phone' ,'adresse')->get();
+    public function index()
+    {
+        return response(Freedom::all());
     }
 
     public function store(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'adresse' => 'required',
-        ]);
 
-        Freedom::create($request->post());
+        Freedom::create($request->all());
         return response()->json([
             'message'=>'Item added successfully'
         ]);
@@ -35,14 +30,7 @@ class FreedomController extends Controller {
     }
  
     public function update(Request $request, Freedom $freedom){
-        $request->validate([
-            'name'=>'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'adresse' => 'required',
-        ]);
-
-        $freedom->fill($request->post())->update();
+        $freedom->update($request->all());
         return response()->json([
             'message' => 'Item updated successfully'
         ]);
