@@ -42,7 +42,7 @@ export default function Update() {
         await axios.post('http://127.0.0.1:8000/api/freedoms/' + id, formData)
             .then(({ data }) => {
                 console.log(data.message)
-                navigate('/')
+                navigate('/Admin')
             }).catch(({ response }) => {
                 if (response.status == 422) {
                     console.log(response.data.errors)
@@ -92,7 +92,7 @@ export default function Update() {
                             </div>
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <label for="chooseOption" class="form-label">Your Adresse</label>
+                                    <label for="chooseOption" class="form-label">Your Message</label>
                                     <input type="subject" name="adresse" 
                                             value={adresse}
                                             onChange={(e)=>{setAdresse(e.target.value)}}/>

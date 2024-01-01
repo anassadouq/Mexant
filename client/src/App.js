@@ -6,6 +6,8 @@ import Header from './Components/Header/Header';
 import Liste from './Components/Liste/Liste';
 import Create from './Components/Create/Create';
 import Update from './Components/Update/Update';
+
+import Home from './Components/Home/Home';
   
 class App extends Component{
   render(){
@@ -13,9 +15,12 @@ class App extends Component{
       <Router>
         <Header/>
         <Routes>
-          <Route path='/' element={<Liste/>}/>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/Home' element={<Home/>}/>
+          <Route path='/Admin' element={<Liste/>}/>
           <Route path='/Create' element={<Create/>}/>
           <Route path='/Update/:id' element={<Update/>}/>
+          
         </Routes>
       </Router>
     )

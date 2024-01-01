@@ -42,7 +42,7 @@ export default function Liste() {
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Adresse</th> 
+            <th>Message</th> 
             <th>Action</th> 
           </tr>
           {
