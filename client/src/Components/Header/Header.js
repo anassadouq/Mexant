@@ -1,12 +1,13 @@
 import React from "react";
 import { Link} from 'react-router-dom';
+import { FaUserAlt } from "react-icons/fa";
 
 export default function Header(){
     return(
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/home">
-                    <img src="./images/logo.png" className="mx-5" width="150px"/>
+                    <img src="./images/logo.png" className="mx-5" width="120px"/>
                 </Link>
                     
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +29,7 @@ export default function Header(){
                         </li>
                     </ul>
                     <Link to="/Admin">
-                        <button className="btn btn-success" type="submit">Admin Page</button>
+                        <button className="btn mx-2" type="submit"><FaUserAlt/> Admin</button>
                     </Link>
                 </div>
             </div>
