@@ -1,8 +1,9 @@
 import React from "react";
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaUserAlt } from "react-icons/fa";
 
 export default function Header(){
+
     return(
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
