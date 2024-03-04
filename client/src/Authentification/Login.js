@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AccountService } from './AccountService';
 import axios from 'axios';
+import Header from '../Components/Header/Header'
 
 export default function Login() {
   let navigate = useNavigate();
@@ -30,26 +31,29 @@ export default function Login() {
   };
 
   return (
-    <div className="container my-5">
-      <div className="my-4 card mx-auto" style={{ maxWidth: '600px' }}>
-        <div className="card-body">
-          <h1 className="text-center">Login</h1>
-          <form onSubmit={onSubmit}>
-            <div className="row">
-            </div>
+    <div>
+      <Header/>
+      <div className="container my-5">
+        <div className="my-4 card mx-auto" style={{ maxWidth: '600px' }}>
+          <div className="card-body">
+            <h1 className="text-center">Login</h1>
+            <form onSubmit={onSubmit}>
+              <div className="row">
+              </div>
 
-            <div className='form-group'>
-              <b>Email</b>
-              <input type="text" name="email" onChange={onChange} className="form-control my-3" placeholder="Enter Your Email Address" />
-            </div>
+              <div className='form-group'>
+                <b>Email</b>
+                <input type="text" name="email" onChange={onChange} className="form-control my-3" placeholder="Enter Your Email Address" />
+              </div>
 
-            <div className='form-group'>
-              <b>Password</b>
-              <input type="password" name="password" onChange={onChange} className="form-control my-3" placeholder="*******" />
-              <button type="submit" className="form-control btn btn-dark btn-block" >Login</button><br/><br/>
-            </div>
-          </form>
-          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+              <div className='form-group'>
+                <b>Password</b>
+                <input type="password" name="password" onChange={onChange} className="form-control my-3" placeholder="*******" />
+                <button type="submit" className="form-control btn btn-dark btn-block" >Login</button><br/><br/>
+              </div>
+            </form>
+            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+          </div>
         </div>
       </div>
     </div>
