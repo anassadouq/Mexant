@@ -24,7 +24,7 @@ export default function Create(){
         await axios.post('http://127.0.0.1:8000/api/freedoms', formData)
         .then(({data})=>{
             console.log(data.message)
-            navigate('/Home')
+            navigate('/')
         }).catch(({response})=>{
             if (response.status ==422) {
                 console.log(response.data.errors)

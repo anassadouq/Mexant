@@ -8,11 +8,14 @@ import Login from './Authentification/Login';
 import AuthGuard from './Authentification/AuthGuard';
 
 import Home from './Components/Home/Home';
-import Header from './Components/Header/Header';
 import Liste from './Components/Liste/Liste';
 import Create from './Components/Create/Create';
-import Update from './Components/Update/Update';
-  
+
+import Services from './Components/Services/Services';
+import About from './Components/About/About';
+import BusinessSolution from './Components/BusinessSolution/BusinessSolution';
+import Footer from './Components/Footer/Footer';
+
 class App extends Component{
   render(){
     return (
@@ -22,12 +25,23 @@ class App extends Component{
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
 
-          <Route path='/' element={<Home/>}/>
-          <Route path='/Home' element={<Home/>}/>
-          <Route path='/Create' element={<Create/>}/>
-          <Route path='/Update/:id' element={<Update/>}/>
+          <Route path="/" element={
+            <AuthGuard>
+              <Home/>
+              <Services/>
+              <BusinessSolution/><br/><br/>
+              <About/><br/><br/>
+              <Footer/>
+            </AuthGuard>
+          }/>
 
-          <Route path="/Admin" element={
+          <Route path="/create" element={
+            <AuthGuard>
+              <Create/>
+            </AuthGuard>
+          }/>
+
+          <Route path="/admin" element={
             <AuthGuard>
               <Liste/>
             </AuthGuard>

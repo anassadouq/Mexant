@@ -23,7 +23,11 @@ export default function Login() {
     axios.post('http://127.0.0.1:8000/api/login', credentials)
       .then(res => {
         AccountService.saveToken(res.data.token);
-        navigate('/Admin');
+        if (credentials.email === 'admin@gmail.com') {
+          navigate('/admin');
+        } else {
+          navigate('/');
+        }
       })
       .catch(error => {
         setErrorMessage("Email or Password incorrect. Please try again.");
@@ -32,7 +36,6 @@ export default function Login() {
 
   return (
     <div>
-      <Header/>
       <div className="container my-5">
         <div className="my-4 card mx-auto" style={{ maxWidth: '600px' }}>
           <div className="card-body">
@@ -51,6 +54,13 @@ export default function Login() {
                 <input type="password" name="password" onChange={onChange} className="form-control my-3" placeholder="*******" />
                 <button type="submit" className="form-control btn btn-dark btn-block" >Login</button><br/><br/>
               </div>
+
+              <center>
+                <span>I don't have an account.</span>
+                <span>
+                  <Link to="/register" className="text-center mx-2">Register</Link>
+                </span>
+              </center>
             </form>
             {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           </div>
