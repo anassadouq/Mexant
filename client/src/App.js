@@ -26,13 +26,13 @@ class App extends Component{
             <Route path="/login" element={<Login />} />
 
           <Route path="/" element={
-            <AuthGuard>
+            <>
               <Home/>
               <Services/>
               <BusinessSolution/><br/><br/>
               <About/><br/><br/>
               <Footer/>
-            </AuthGuard>
+            </>
           }/>
 
           <Route path="/create" element={
