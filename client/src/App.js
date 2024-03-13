@@ -7,6 +7,7 @@ import Register from './Authentification/Register';
 import Login from './Authentification/Login';
 import AuthGuard from './Authentification/AuthGuard';
 
+import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Liste from './Components/Liste/Liste';
 import Create from './Components/Create/Create';
@@ -27,10 +28,11 @@ class App extends Component{
 
           <Route path="/" element={
             <>
+              <Header/>
               <Home/>
               <Services/>
-              <BusinessSolution/><br/><br/>
-              <About/><br/><br/>
+              <BusinessSolution/>
+              <About/><br/><br/><br/><br/>
               <Footer/>
             </>
           }/>

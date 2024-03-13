@@ -8,7 +8,9 @@ import { FaDatabase } from "react-icons/fa6";
 
 export default function Services(){
     return(
-        <section className="services">
+        <section className="services my-5">
+            <br/>
+            <a name="services"> </a>  
             <div className="mx-5 my-5">
                 <div className="row">
                     <div className="col-lg-5 btn btn-light my-4 mx-5">

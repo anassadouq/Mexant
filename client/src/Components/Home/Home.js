@@ -5,8 +5,9 @@ import './Home.css';
 export default function Home(){
     return (
         <div>
-            <Header/>
-            <div className="swiper-container">
+            <br/>
+            <a name="home"> </a>  
+            <div className="my-4 swiper-container">
                 <div className="swiper-wrapper">
                     <div className="swiper-slide">
                         <div className="slide-inner">

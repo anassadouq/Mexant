@@ -3,8 +3,9 @@ import React from "react";
 export default function About(){
     return(
         <div>
+            <a name="about"> </a>  
             <center>
-                <b style={{"color":"#FF4500"}} className="my-5">ABOUT US</b>
+                <b style={{"color":"#FF4500"}} className="my-5"><br/><br/>ABOUT US</b>
                 <h1 style={{"fontWeight":"bold"}}>Know Us Better</h1>
             </center>
 
